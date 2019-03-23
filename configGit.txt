@@ -1,4 +1,5 @@
 
+
 git config --global user.email "alemaopiazza69@gmail.com"
 git config --global user.name "Alessandro Piazza"
 git clone
@@ -9,3 +10,6 @@ git add . 				//adiciona tudo
 git commit -m"Alterando Arquivo"
 git push
 git push -u origin master
+git pull  //BAIXAR ARQUIVOS
+
+https://github.com/rafaelsouzasilva/microlins
