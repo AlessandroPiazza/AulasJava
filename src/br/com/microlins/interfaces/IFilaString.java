@@ -1,6 +1,6 @@
 package br.com.microlins.interfaces;
 
-public interface IPilhaString {
+public interface IFilaString {
 
 	String pegarPrimeiro();
 
