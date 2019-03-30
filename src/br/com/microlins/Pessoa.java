@@ -1,7 +1,14 @@
 package br.com.microlins;
 
-public class Pessoa {
+import java.util.ArrayList;
+import java.util.List;
 
+import br.com.microlins.interfaces.IPessoa;
+
+public class Pessoa implements IPessoa {
+	
+	
+	
 	private String nome;
 	private int idade;
 	private double peso;
@@ -38,5 +45,19 @@ public class Pessoa {
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
+
+	@Override
+	public String exibirDados() {
+		return "nome= " + nome + ", idade= " + idade + ", peso= " + peso
+				+ ", altura= " + altura + ", imc= " + calculaImc() ;
+	}
+
+	@Override
+	public double calculaImc() {
+		return peso/(altura*2);
+	}
+	
+	
+	
 
 }
