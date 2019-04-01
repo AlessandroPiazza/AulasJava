@@ -7,9 +7,18 @@ import java.util.function.Consumer;
 
 import br.com.microlins.interfaces.IAtividadePessoa;
 
-public class AtividadePessoa implements IAtividadePessoa{
+public class AtividadePessoaA implements IAtividadePessoa{
 	private List<Pessoa> listaPessoa = new ArrayList<>();
 	private List<Atividade> listaAtividade = new ArrayList<>();
+	public List<Atividade> getListaAtividade() {
+		return listaAtividade;
+	}
+
+
+	public void setListaAtividade(List<Atividade> listaAtividade) {
+		this.listaAtividade = listaAtividade;
+	}
+
 	private Iterator<Atividade> iteratorLista = null;
 
 	@Override
@@ -18,17 +27,29 @@ public class AtividadePessoa implements IAtividadePessoa{
 		return listaAtividade.add(atividade);
 	}
 	
+	public boolean gravarPessoa(Pessoa pessoa) {
+		pessoa = new Pessoa();
+		return listaPessoa.add(pessoa);
+	}
 	
+	public List<Pessoa> getListaPessoa() {
+		return listaPessoa;
+	}
+
+
+	public void setListaPessoa(List<Pessoa> listaPessoa) {
+		this.listaPessoa = listaPessoa;
+	}
+
+
 	@Override
 	public List<Atividade> recuperarTodasAtividadesPorPessoa(Pessoa pessoa) {
 		List<Atividade> listaAtividade1 = new ArrayList<>();
 		iteratorLista = listaAtividade.iterator();
-		int i = 0;
 		while(iteratorLista.hasNext()) {
-			i++;
-			Pessoa pessoa2 = pessoa;
-			if(listaAtividade.contains(pessoa2)) {
-				System.out.println(listaAtividade.get(i));
+		
+			if(listaAtividade.contains(pessoa)) {
+				listaAtividade1.add(listaAtividade.get(1));
 			}
 		}
 
